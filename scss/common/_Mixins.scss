@@ -1,0 +1,66 @@
+@mixin link {
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0px;
+        height: 1px;
+        background-color: white;
+        transition: 0.2s all;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0px;
+        height: 1px;
+        background-color: white;
+        transition: 0.2s all;
+    }
+    @media (min-width: 1000px) {
+        &:hover {
+            &::after {
+                width: 50%;
+                
+            }
+            &::before {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@mixin bar {
+    direction: rtl;
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar {
+        background-color: unset;
+        width: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.219);
+    }
+}
+
+@mixin input {
+    background-color: unset;
+    border: 1px solid #868686;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    padding: 16px 26px;
+    transition: 0.2s all;
+    &::placeholder {
+        color: #868686;
+    }
+    &:focus {
+        outline: 0;
+        border: 1px solid #ffffff;
+    }
+}

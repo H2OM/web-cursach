@@ -1,0 +1,53 @@
+.Ratingbar {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-top: 90px;
+    &_mini {
+        flex-direction: column-reverse;
+        gap:4px;
+        margin-top: 0;
+        .Ratingbar__text {
+            font-size: 12px;
+        }
+        .Ratingbar__rait {
+            gap: 4px;
+            &__star {
+                height: auto;
+                width: 14px;
+            }
+        }
+    }
+    &__rait {
+        display: flex;
+        gap: 2px;
+        &__star {
+            position: relative;
+            transition: 0.2s all;
+            height: 20px;
+            cursor: pointer;
+            stop {
+                transition: 0.2s all;
+            }
+            &_full {
+                
+                path {
+                    stroke: rgb(99, 255, 120);
+                }
+                stop {
+                    stop-opacity: 1;
+                    stop-color: rgb(99, 255, 120);
+                }
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        color: white;
+        font-weight: 200;
+        line-height: 13px;
+        &__mark {
+            padding-left: 35px;
+        }
+    }
+}

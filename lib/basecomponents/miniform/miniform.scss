@@ -1,0 +1,78 @@
+@import "/scss/common/Mixins";
+
+.Miniform {
+    display: flex;
+    gap: 10px;
+    height: 46px;
+    &_size {
+        margin-top: 10px;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        gap: 2%;
+    }   
+    &__input {
+        @include input;
+        height: 100%;
+        
+        &__error {
+            color:rgb(255, 0, 0);
+            height: 0px; 
+            font-size: 14px;
+            padding-left: 20px;
+            overflow: hidden;
+            color: white;
+            transition: height 0.2s 0.2s, margin-bottom 0.2s 0.2s, border-left 0.2s;
+            margin-bottom: 0px;
+            mix-blend-mode: difference;
+            &_show {
+                height: 17px;
+                margin-bottom: 10px;
+                overflow: visible;
+                transition: 0.2s all, border-left 0.2s 0.2s;
+            }
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: #ffffff;
+            transition: background-color 5000s ease-in-out 0s;
+            box-shadow: inset 0 0 20px 20px #23232329;
+        }
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            &_size {
+                width: 70%;
+            }
+        }
+    }
+    &__button {
+        font-size: 16px;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;
+        padding: 0 18px;
+        &:disabled {
+            color: #6e6e6e;
+        }
+        &:hover {
+            background-color: #d4d4d4;
+        }
+        &_submiting {
+            background-color: rgb(134, 134, 134);
+            
+        }
+    }
+    &_submit {
+        .Miniform__input {
+            color: #585858;
+            &::placeholder {
+                color: #585858;
+            }
+        }
+
+    }
+}

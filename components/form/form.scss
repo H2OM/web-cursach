@@ -1,0 +1,261 @@
+@import "/scss/common/Mixins";
+
+.Form {
+    padding-bottom: 200px;
+    &__form {
+        margin: 0 auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+        &_submit {
+            .Form__form__input {
+                color: #585858;
+                &::placeholder {
+                    color: #585858;
+                }
+            }
+            &_submiting {
+
+            }
+        }
+        &__blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        &__radio {
+            display: flex;
+            &__label {
+                font-size: 16px;
+                color: white;
+                &_error {
+                    color: red;
+                }
+            }
+        }
+        &__input {
+            margin: 6px 0;
+            
+            @include input;
+            &_radio {
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            &__error {
+                color:rgb(255, 0, 0);
+                height: 0px; 
+                font-size: 14px;
+                padding-left: 20px;
+                overflow: hidden;
+                color: white;
+                transition: height 0.2s 0.2s, margin-bottom 0.2s 0.2s, border-left 0.2s;
+                margin-bottom: 0px;
+                mix-blend-mode: difference;
+                &_show {
+                    height: 17px;
+                    margin-bottom: 10px;
+                    overflow: visible;
+                    transition: 0.2s all, border-left 0.2s 0.2s;
+                }
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active{
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: #ffffff;
+                transition: background-color 5000s ease-in-out 0s;
+                box-shadow: inset 0 0 20px 20px #23232329;
+            }
+            &_area {
+                min-height: 300px;
+                max-height: 450px;
+                resize: vertical;
+                &::-webkit-scrollbar-button {
+                    display: none;
+                }
+                &::-webkit-scrollbar {
+                    background-color: unset;
+                    width: 8px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: white;
+                }
+            }
+        }
+        &__submit {
+            font-size: 16px;
+            height: 74px;
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 18px;
+            cursor: pointer;
+            transition: 0.2s all;
+            &:disabled {
+                color: #6e6e6e;
+            }
+            &:hover {
+                background-color: #d4d4d4;
+            }
+            &_submiting {
+                background-color: rgb(134, 134, 134);
+                
+            }
+        }
+    }
+    
+}
+@media (max-width: 1560px) {
+    .Form {
+        .title {
+            font-size: 96px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .Form_full {
+        .Form__formplate {
+            padding: 0;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .Form__cords {
+        display: none;
+    }
+}
+@media (max-width: 1060px) {
+    .Form {
+        &__formplate {
+            padding: 60px 20px;
+            width: 100%;
+        }
+        &__form {
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 980px) and (min-width: 960px) {
+    .Form__formplate .title {
+        font-size: 90px;
+    }
+}
+@media (max-width: 960px) {
+    .Form__formplate {
+        padding: 50px 20px;
+        .title {
+            font-size: 68px;
+            margin-bottom: 66px;
+        }
+    } 
+    .Form_full {
+        .title {
+            margin-bottom: 80px;
+        }
+    }
+    
+    
+}
+
+@media (max-width: 740px) {
+    .Form__formplate {
+        .title {
+            font-size: 56px;
+        }
+    } 
+    .Form_full {
+        backdrop-filter: blur(30px);
+        .Form__formplate {
+            padding-top: 90px;
+            padding-bottom: 90px;
+            .title {
+                margin-bottom: 80px;
+                font-size: 56px;
+            }
+        } 
+    }
+    
+}
+@media (max-width: 600px) {
+    .Form {
+        padding: 90px 0;
+        padding-bottom: 170px;
+    }
+    .Form_full {
+        padding: 0px 0;
+        .Form__formplate {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            .title {
+                font-size: calc(18px + 4vw);
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .Form__formplate {
+        padding: 16px 10px;
+        padding-bottom: 60px;
+        .title {
+            font-size: calc(18px + 4vw);
+            margin-bottom: 20px;
+        }
+    } 
+    .Form__form__input {
+        margin-bottom: 12px; 
+        font-size: 15px;
+        padding: 12px 10px;
+        &::placeholder {
+            font-size: 15px;
+        }
+        &_textarea {
+            min-height: 80px;
+            max-height: 130px;
+        }
+    }
+    .Form__form__multimenu {
+        padding: 0;
+        margin-top: -14px;
+    }
+    .Form__form__multimenu__list__row {
+        padding: 12px 10px;
+    }
+    .Form__form__multimenu_show {
+        height: 220px;
+    }
+    
+    .Form__form__multibutton__arrow { 
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 9px solid #e4e4e4;
+    }
+    .Form__form__submit {
+        font-size: 20px;
+        padding: 16px;
+    }
+}
+@media (max-width: 390px) {
+    .Form_full {
+        .Form__form__input_textarea {
+            max-height: 250px;
+            min-height: 90px;
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    .Form__formplate {
+        .title {
+            font-size: 28px;
+        }
+    } 
+}
+

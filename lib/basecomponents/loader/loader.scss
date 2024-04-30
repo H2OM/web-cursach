@@ -1,0 +1,26 @@
+.Loader {
+    display: flex;
+    gap: 14px;
+    z-index: 12;
+    justify-content: center;
+    &__point {
+        width: 15px;
+        height: 15px;
+        border: 1px solid white;
+        animation: loader 0.9s infinite forwards linear;
+    }
+    @keyframes loader {
+        from {
+            background-color: unset;
+        }
+        16% {
+            background-color: white;
+        }
+        33% {
+            background-color: unset;
+        }
+        to {        
+            background-color: unset;
+        }
+    }
+}

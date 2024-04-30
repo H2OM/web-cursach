@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "app\\": "../"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.3.1"
+        }
+    },
+    "require": {
+    }
+}

@@ -1,0 +1,86 @@
+.Catalog {
+    padding-bottom: 110px;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        &__cart {
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #D8D9D9;
+            padding: 30px 0;
+            cursor: pointer;
+            @media (min-width: 1000px) {
+                &:hover {
+                    .Catalog__grid__cart__image {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+            &__image {
+                width: 290px;
+                height: 290px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: 0.2s all;
+            }
+            &__desc {
+                &__text {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 200;
+                    padding-left: 10px;
+                }
+            }
+            &__rait {
+                color: #C1C1C1;
+                font-size: 16px;
+                font-weight: 300;
+                flex-shrink: 0;
+            }
+        }
+    }
+    &__nav {
+        margin-top: 150px;
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        &__point {
+            font-size: 14px;
+            color: white;
+            font-weight: 200;
+            width: auto;
+            height: auto;
+            border: 1px solid white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 9px;
+            transition: 0.2s all;
+            @media (min-width: 1000px) {
+                &:hover {
+                    background-color: #9b9b9b;
+                }
+            }
+            &_select {
+                background-color: white;
+                color: black;
+                @media (min-width: 1000px) {
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+        &__space {
+            font-size: 14px;
+            color: white;
+            font-weight: 200;
+        }
+    }
+
+}

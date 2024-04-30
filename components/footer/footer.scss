@@ -1,0 +1,68 @@
+@import "/scss/common/Mixins";
+
+.Footer {
+    padding-top: 70px;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 98px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+
+        &_second {
+            display: block;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        &__link {
+            color: white;
+            font-weight: 200;
+            position: relative;
+            @include link;
+        }
+        &__section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
+            .subtitle {
+                margin-bottom: 10px;
+            }
+            &__desc {
+                color: white;
+                font-size: 16px;
+                font-weight: 200;
+
+            }
+            &__icons {
+                display: flex;
+                gap: 20px;
+                &__icon {
+
+                }
+            }
+            &__form {
+                display: flex;
+                gap: 10px;
+                height: 46px;
+                &__input {
+                    @include input;
+                }
+                &__button {
+                    font-size: 16px;
+                    border-radius: 10px;
+                    background-color: white;
+                    cursor: pointer;
+                    padding: 0 18px;
+                }
+            }
+        }
+    }
+    &__logo {
+        width: auto;
+        height: 100px;
+    }
+}

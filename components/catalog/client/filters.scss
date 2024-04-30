@@ -1,0 +1,195 @@
+@import '/scss/common/Mixins';
+
+.Filters {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 150px;
+    &__filtermenu {
+        position: absolute;
+        height: 0px;
+        overflow: hidden;
+        padding: 30px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+        color: white;
+        backdrop-filter: blur(5px);
+        transition: padding 0.4s, height 0.6s 0.1s;
+        &_show {
+            height: 344px;
+            padding: 30px;
+            padding-top: 5px;
+        }
+        &_sort {
+            width: 190px;
+            left: 0;
+            &_show {
+                height: 127px;
+                padding: 30px;
+                padding-top: 5px;
+            }
+        }
+        &__block {
+            &__title {
+                margin-top: 10px;
+            }
+            &__options {
+                margin-top: 4px;
+                list-style-type: none;
+                &_rating {
+                    display: flex;
+                    gap: 5px;
+                }
+                &__li {
+                    position: relative;
+                    padding-left: 20px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    &:hover {
+                        &::before {
+                            content: '';
+                            background-color: rgba(255, 255, 255, 0.466);
+                        } 
+                    } 
+                    &_select {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            transform: translateY(-50%);
+                            background-color: white;
+                            border: 1px solid white;
+                        } 
+                        &:hover {
+                            &::before {
+                                content: '';
+                                background-color: white;
+                            } 
+                        }
+                    }     
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        transform: translateY(-50%);
+                        border: 1px solid white;
+                        transition: 0.2s all;
+                    }        
+                }
+                &__submit {
+                    width: 40px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                &__input {
+                    @include input;
+                    background-color: #1a1a1a;
+                    color: white;
+                    padding: 4px 0;
+                    width: 40px;
+                    font-size: 13px;
+                    border-radius: 5px;
+                    border: 1px solid #525252;
+                    text-align: center;
+                    
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                    }
+                }
+            }
+        }
+    }
+    &__sort {
+        &__main {
+            position: relative;
+            background-color: unset;
+            color: white;
+            @include link;
+            &__svg {
+                height: 10px;
+                margin-left: 6px;
+                transition: 0.2s all;
+            }
+        }
+    }
+    &__filter {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: 20px;
+        &__selected {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            @include bar;
+            direction: ltr;
+            padding-bottom: 4px;
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+            &__block {
+                position: relative;
+                background-color: #D8D9D9;
+                color: black;
+                font-size: 16px;
+                border-radius: 20px;
+                padding-left: 20px;
+                padding-right: 40px;
+                flex-shrink: 0;
+                &__close {
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    height: 15px;
+                    cursor: pointer;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: rotate(-45deg);
+                        width: 1px;
+                        height: 100%;
+                        background-color: black;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: rotate(45deg);
+                        width: 1px;
+                        height: 100%;
+                        background-color: black;
+                    }
+                }
+            }
+        }
+        &__main {
+            position: relative;
+            @include link;
+            color: white;
+            background-color: unset;
+            &__svg {
+                height: 15px;
+                transform: translateY(2px);
+                margin-left: 8px;
+            }
+        }
+    }
+}

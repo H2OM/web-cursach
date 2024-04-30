@@ -1,0 +1,49 @@
+.Movement{
+    &__wrap {
+        overflow-x: hidden;
+    }
+    &__slider {
+        display: flex;
+        height: 100vh;
+        flex-direction: row;
+        justify-content: flex-start;
+        transition: 0.4s all;
+    }
+    &__blocks {
+        margin-top: 150px;
+        display: flex;
+        gap: 80px;
+        transition: 0.4s all;
+    }
+    &__nav {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 14px;
+        z-index: 12;
+        &__point {
+            width: 15px;
+            height: 15px;
+            border: 1px solid white;
+            cursor: pointer;
+            transition: 0.2s all;
+            @media (min-width: 1000px) {
+                &:hover {
+                    background-color: #C1C1C1;
+                }
+            }
+            &_select {
+                background-color: white;
+                @media (min-width: 1000px) {
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

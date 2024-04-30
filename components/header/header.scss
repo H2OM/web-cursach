@@ -1,0 +1,69 @@
+@import "/scss/common/Mixins";
+
+.Header {
+    height: 80px;
+    backdrop-filter: blur(40px);
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        &__logo {
+            width: 300px;
+            height: auto;
+        }
+        &__links {
+            display: flex;
+            gap: 30px;
+            &__link {
+                position: relative;
+                transition: 0.2s all;
+                @include link;
+            }
+        }
+        &__options {
+            display: flex;
+            gap: 20px;
+            &__block {
+                position: relative;
+                display: flex;
+                &:first-child {
+                    gap: 6px;
+                }
+                &:last-child {
+                    &::after {
+                        content: attr(data-count);
+                        position: absolute;
+                        top: -14px;
+                        right: -6px;
+                        color: white;
+                        font-size: 12px;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+            &__input {
+                background-color: unset;
+                border-bottom: 1px solid white;
+                color: white;
+                font-size: 12px;
+                padding-left: 5px;
+                font-family: '__manrope_2d5a5c', '__manrope_Fallback_2d5a5c';
+                &::placeholder {
+                    font-size: 12px;
+                    font-family: '__manrope_2d5a5c', '__manrope_Fallback_2d5a5c';
+                    color: #dddddd;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            &__icon {
+            }
+        }
+    }
+}

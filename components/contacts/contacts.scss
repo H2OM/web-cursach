@@ -1,0 +1,40 @@
+@import "/scss/common/Mixins";
+
+.Contacts {
+    padding-bottom: 30vh;
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 180px;
+        &__section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &__icons {
+                gap: 10px;
+                &__icon {
+
+                }
+            }
+            &__form {
+                margin-top: 10px;
+                height: 60px;
+                width: 100%;
+                display: flex;
+                gap: 2%;
+                &__input {
+                    width: 70%;
+                    @include input;
+                }
+            }
+            &__button {
+                width: 28%;
+                font-size: 16px;
+                border-radius: 10px;
+                background-color: white;
+                cursor: pointer;
+                padding: 0 18px;
+            }
+        }
+    }
+}
