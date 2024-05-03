@@ -1,0 +1,75 @@
+.Voteform {
+    position: fixed;
+    display: none;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    padding-top: 5px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    color: white;
+    width: auto;
+    height: 400px;
+    &_show {
+        display: block;
+    }
+    &__close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: -40px;
+        cursor: pointer;
+        background-color: unset;
+        &::after {
+            content: "";
+            display: block;
+            top: 0;
+            left: 50%;
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: white;
+            transform: rotate(-45deg);
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 24px;
+        &__block {
+            background-color: #80808057;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s all;
+            &_selected {
+                background-color: rgb(229 229 229 / 56%);
+            }
+            &__input {
+                visibility: hidden;
+            }
+        }
+        &__submit {
+            padding: 9px;
+            font-size: 16px;
+            margin-top: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+    
+}

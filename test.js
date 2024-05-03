@@ -1,10 +1,10 @@
-const test = '5d';
+const test = {
+    5: ["4141", '44141'],
+    3: ["4141", '44141'],
+    2: ["4141", '44141'],
+    1: ["4141", '44141'],
 
-console.log();
+};
 
-if(!Number(test)) {
-    console.log("false");
 
-} else {
-    console.log("true");
-}
+console.log(test);

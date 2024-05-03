@@ -18,7 +18,7 @@ body {
     background-color: $main;
 }
 body {
-    
+    position: relative;
     overflow-x: hidden;
     &::-webkit-scrollbar-button {
         display: none;
@@ -39,6 +39,9 @@ section {
     margin: 0 auto;
     position: relative;
     width: 1700px;
+    &_head {
+        position:unset;
+    }
 }
 .title {
     margin: 0 auto;

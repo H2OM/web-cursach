@@ -1,0 +1,21 @@
+.Fav {
+    margin-right: 40px;
+    display: flex;
+    cursor: pointer;
+    color: white;
+    &__mini {
+        align-items: center;
+        margin-left: 30px;
+        margin-top: 11px;
+        .Fav__star {
+            margin-top: 0px;
+            margin-bottom: 6px;
+        }
+    }
+    &__star {
+        margin-top: 3px;
+        height: 18px;
+        width: 18px;
+        margin-left: 8px;
+    }
+}

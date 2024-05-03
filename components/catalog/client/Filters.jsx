@@ -41,6 +41,7 @@ export default function Filters({ cities }) {
                                     } else {
                                         params.delete(each[0]);
                                     }
+                                    params.delete("page");
                                     router.push(pathname + `?` + params.toString(), {scroll: false});
                                 }}></button>
                             </div>
@@ -57,6 +58,7 @@ export default function Filters({ cities }) {
     
                                 <button className="Filters__filter__selected__block__close" onClick={()=>{
                                     params.delete('rating');
+                                    params.delete("page");
                                     router.push(pathname + `?` + params.toString(), {scroll: false});
                                 }}></button>
                             </div>
@@ -94,7 +96,7 @@ export default function Filters({ cities }) {
                                     params.set('cities', ((params.get('cities') ?? "") + target.dataset.city+','));
                                 }
                                 if(params.get('cities').length == 0) params.delete('cities');
-
+                                params.delete("page");
                                 router.push(pathname + `?` + params.toString(), {scroll: false});
                                 
                             }
@@ -120,6 +122,7 @@ export default function Filters({ cities }) {
                             } else {
                                 params.set('favs', target.dataset.favs);
                             }
+                            params.delete("page");
                             router.push(pathname + `?` + params.toString(), {scroll: false});
 
                         }
@@ -150,6 +153,7 @@ export default function Filters({ cities }) {
                         }} />
                         <button className="Filters__filtermenu__block__options__submit" onClick={({ target }) => {
                             params.delete('rating');
+                            params.delete("page");
                             if (rating.min || rating.max) params.set('rating', `${rating.min},${rating.max}`);
                             router.push(pathname + `?` + params.toString(), {scroll: false});
                         }}>ОК</button>

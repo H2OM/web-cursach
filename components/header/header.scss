@@ -44,6 +44,7 @@
                         width: auto;
                         height: auto;
                     }
+                    cursor: pointer;
                 }
             }
             &__input {
@@ -62,8 +63,7 @@
                     outline: none;
                 }
             }
-            &__icon {
-            }
         }
     }
+    
 }

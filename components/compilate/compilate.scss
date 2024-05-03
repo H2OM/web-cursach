@@ -21,10 +21,14 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 20px;
+                    &__ontitle {
+                        display: flex;
+                    }
                 }
             }
             &__image {
-                width: auto;
+                width: 100%;
                 height: 330px;
                 object-fit: cover;
                 border-radius: 10px;

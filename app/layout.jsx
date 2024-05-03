@@ -4,6 +4,9 @@ import "@/scss/global.scss";
 import Header from '@/components/header/server/Header';
 import Footer from '@/components/footer/server/Footer';
 import Notification from '@/components/notification/client/Notification';
+import Favmenu from '@/lib/basecomponents/favmenu/favmenu';
+import SearchMenu from '@/lib/basecomponents/searchmenu/searchmenu';
+import Voteform from '@/components/voteform/client/Voteform';
 const manrope = localFont({
     src: [
         { 
@@ -36,10 +39,13 @@ export default function RootLayout({ children }) {
             <body className={manrope.className}>
                 <ClientProvider>
                     <Header/>
+                    <Favmenu/>
+                    <SearchMenu/>
                     <Notification/>
                     <main>
                         {children}
                     </main>
+                    <Voteform/>
                     <Footer/>
                 </ClientProvider>
             </body>

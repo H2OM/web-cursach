@@ -24,7 +24,12 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    &__ontitle {
+                        display: flex;
+                        
+                    }
                 }
+                
             }
             &__image {
                 width: 250px;

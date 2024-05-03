@@ -4,6 +4,7 @@ import '../compilate.scss';
 import Uptitle from '@/lib/basecomponents/uptitle/uptitle';
 import Ratingbar from '@/lib/basecomponents/raitingbar/ratingbar';
 import Movement from '@/lib/basecomponents/movement/movement';
+import Addtofav from '@/lib/basecomponents/addtofav/addtofav';
 
 export default async function Compilate () {
     
@@ -22,28 +23,32 @@ export default async function Compilate () {
 
     const blocks = data.map((each, i)=>{
         return (
-            <Link href={'/catalog/'+each.article} key={each.article+i}>
+            <div>
                 <div className="Compilate__blocks__block" key={each.title+i}>
-                    <Image
-                        src={"/img/" + each.image}
-                        alt="image"
-                        className="Compilate__blocks__block__image"
-                        width={0}
-                        height={0}
-                        sizes='100vw'
-                        priority={true}
-                        quality={100}
-                    />
+                    <Link href={'/catalog/'+each.article}>
+                        <Image
+                            src={"/img/" + each.image}
+                            alt="image"
+                            className="Compilate__blocks__block__image"
+                            width={0}
+                            height={0}
+                            sizes='100vw'
+                            priority={true}
+                            quality={100}
+                        />
+                    </Link>
                     <div className="Compilate__blocks__block__split">
                         <div className="Compilate__blocks__block__split__up">
-                            <h3 className="subtitle">{each.title}</h3>
+                            <div className="Compilate__blocks__block__split__up__ontitle">
+                                <h3 className="subtitle">{each.title}</h3>
+                                <Addtofav mini id={each.id} title={each.title} article={each.article} image={each.image} staronly/>
+                            </div>
                             <Ratingbar rating={each.rating} voices={each.voices} mini id={each.id} id2={each.image}/>
                         </div>
                         <div className="Compilate__blocks__block__desc">{each.text}</div>
                     </div>
                 </div>
-            </Link>
-           
+            </div>
         )
     });
 
