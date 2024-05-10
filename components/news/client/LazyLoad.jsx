@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Loader from '@/lib/basecomponents/loader/loader';
 import { useRouter, usePathname, useParams } from "next/navigation";
 
-export default function LazyBlocks ({ val }) {
+export default function LazyLoad ({ val }) {
     const router = useRouter();
     const pathname = usePathname();
     const params = useParams();
@@ -29,7 +29,7 @@ export default function LazyBlocks ({ val }) {
     return (
         <>
             {status === true ? <Loader/> : null}
-            <div ref={ref} className="News__blocks__loadAnchor"></div>
+            <div ref={ref} role="anchor" className="News__blocks__loadAnchor"></div>
         </>
     )
 }

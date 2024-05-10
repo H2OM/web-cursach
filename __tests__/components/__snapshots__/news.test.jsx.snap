@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`news full news 1`] = `
+<div>
+  <section
+    class="News"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="Uptitle__wrap"
+      >
+        <div
+          class="Uptitle__anchorUpUptitle__anchorUp_full "
+        />
+        <div
+          class="Uptitle Uptitle_full Uptitle_show"
+        >
+          <h2
+            class="title"
+          >
+            Новости
+          </h2>
+        </div>
+        <div
+          class="Uptitle__anchorDownUptitle__anchorDown_full "
+        />
+      </div>
+      <div
+        class="News__blocks"
+      >
+        <div
+          class="News__blocks__block"
+        >
+          <div
+            class="News__blocks__block__split"
+          >
+            <h3
+              class="subtitle"
+            >
+              some1
+            </h3>
+            <div
+              class="News__blocks__block__date"
+            >
+              22.02.22
+            </div>
+          </div>
+          <div
+            class="News__blocks__block__split"
+          >
+            <div
+              class="News__blocks__block__desc"
+            >
+              sometext
+            </div>
+            <img
+              alt="image"
+              class="News__blocks__block__image"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              sizes="100vw"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              style="color: transparent;"
+              width="0"
+            />
+          </div>
+        </div>
+        <div
+          class="News__blocks__block"
+        >
+          <div
+            class="News__blocks__block__split"
+          >
+            <h3
+              class="subtitle"
+            >
+              some2
+            </h3>
+            <div
+              class="News__blocks__block__date"
+            >
+              22.02.52
+            </div>
+          </div>
+          <div
+            class="News__blocks__block__split"
+          >
+            <div
+              class="News__blocks__block__desc"
+            >
+              sometext2
+            </div>
+            <img
+              alt="image"
+              class="News__blocks__block__image"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              sizes="100vw"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              style="color: transparent;"
+              width="0"
+            />
+          </div>
+        </div>
+        <div
+          class="News__blocks__block"
+        >
+          <div
+            class="News__blocks__block__split"
+          >
+            <h3
+              class="subtitle"
+            >
+              some3
+            </h3>
+            <div
+              class="News__blocks__block__date"
+            >
+              22.02.24
+            </div>
+          </div>
+          <div
+            class="News__blocks__block__split"
+          >
+            <div
+              class="News__blocks__block__desc"
+            >
+              sometex4t
+            </div>
+            <img
+              alt="image"
+              class="News__blocks__block__image"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              sizes="100vw"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              style="color: transparent;"
+              width="0"
+            />
+          </div>
+        </div>
+        <div
+          class="Loader"
+        >
+          <div
+            class="Loader__point"
+            style="animation-delay: 0s;"
+          />
+          <div
+            class="Loader__point"
+            style="animation-delay: 0.3s;"
+          />
+          <div
+            class="Loader__point"
+            style="animation-delay: 0.6s;"
+          />
+        </div>
+        <div
+          class="News__blocks__loadAnchor"
+          role="anchor"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

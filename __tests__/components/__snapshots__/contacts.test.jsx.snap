@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contacts snapshot 1`] = `
+<div>
+  <section
+    class="Contacts"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="Uptitle__wrap"
+      >
+        <div
+          class="Uptitle__anchorUpUptitle__anchorUp_full "
+        />
+        <div
+          class="Uptitle Uptitle_full "
+        >
+          <h1
+            class="title"
+          >
+            Контакты
+          </h1>
+        </div>
+        <div
+          class="Uptitle__anchorDownUptitle__anchorDown_full "
+        />
+      </div>
+      <div
+        class="Contacts__grid"
+      >
+        <div
+          class="Contacts__grid__section"
+        >
+          <h2
+            class="subtitle"
+          >
+            TopAttractions@gmail.com
+          </h2>
+          <h2
+            class="subtitle"
+          >
+            +7 900 111-11-11
+          </h2>
+          <div
+            class="Contacts__grid__section__icons"
+          >
+            <img
+              alt="tg"
+              class="Contacts__grid__section__icons__icon"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              src="/svg/icon_telegram.svg"
+              style="color: transparent;"
+              width="0"
+            />
+            <img
+              alt="vk"
+              class="Contacts__grid__section__icons__icon"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              src="/svg/icon_vk.svg"
+              style="color: transparent;"
+              width="0"
+            />
+          </div>
+        </div>
+        <div
+          class="Contacts__grid__section"
+        >
+          <h2
+            class="subtitle"
+          >
+            Подпишитесь на рассылку новостей
+          </h2>
+          <form
+            class="Miniform Miniform_size "
+          >
+            <div
+              class="Miniform__input__wrap Miniform__input__wrap_size "
+            >
+              <input
+                class="Miniform__input "
+                name="mail"
+                placeholder="Ваша почта"
+                required=""
+                type="text"
+              />
+              <label
+                class="Miniform__input__error "
+                for="email"
+              >
+                Неверный формат почты
+              </label>
+            </div>
+            <button
+              class="Miniform__button "
+              type="submit"
+            >
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

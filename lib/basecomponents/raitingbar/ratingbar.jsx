@@ -26,7 +26,7 @@ export default function Ratingbar ({rating, voices, mini = false, userrating = f
                             onClick={()=>{
                                 if(!status && !mini) {
                                     setStatus(true);
-                                    fetch('http://localhost/api/user/set-rating?mark='+(i+1)+'&id='+id, {method: 'GET', cache: "no-cache"})
+                                    fetch('http://localhost/api/catalog/set-rating?mark='+(i+1)+'&id='+id, {method: 'GET', cache: "no-cache"})
                                         .then((data)=>{
                                             if(!data.ok) {
                                                 throw new Error();

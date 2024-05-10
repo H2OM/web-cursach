@@ -12,7 +12,8 @@
         protected function mailSubscribe() {
             if(count($this->data) != 1) {header("HTTP/1.0 400 Bad request"); die;}
             try {
-                Db::getPreparedQuery("INSERT INTO `subscribers` (`user_mail`) VALUES (?)", [["VALUE"=>HgetSafeString($this->data['mail']), "PARAMVALUE"=>64]]);
+                Db::getPreparedQuery("INSERT INTO `subscribers` (`user_mail`) VALUES (?)", 
+                    [["VALUE"=>HgetSafeString($this->data['mail']), "PARAMVALUE"=>64]]);
                 exit(json_encode(["message"=>"Ваша заявка отправлена."]));
 
             } catch (\Exception $e) { 
@@ -21,7 +22,8 @@
             }
         }
         protected function formCallback() {
-            if((count($this->data) == 4 && isset($this->data['number'])) || (count($this->data) != 4 && count($this->data) != 5)) {header("HTTP/1.0 400 Bad request"); die;}
+            if((count($this->data) == 4 && isset($this->data['number'])) || (count($this->data) != 4 && count($this->data) != 5)) 
+                {header("HTTP/1.0 400 Bad request"); die;}
             try {
                 $params = [];
                 foreach ($this->data as $k=>$v) {
@@ -39,7 +41,9 @@
                         default: break;
                     }
                 }
-                $query = count($this->data) == 5 ? "(`user_name`, `user_number`, `user_mail`, `text`) VALUES (?, ?, ?, ?)" : "(`user_name`, `user_mail`, `text`) VALUES (?, ?, ?)";
+                $query = count($this->data) == 5 
+                    ? "(`user_name`, `user_number`, `user_mail`, `text`) VALUES (?, ?, ?, ?)" 
+                    : "(`user_name`, `user_mail`, `text`) VALUES (?, ?, ?)";
                 Db::getPreparedQuery("INSERT INTO `incoming` ". $query, $params);
                 exit(json_encode(["message"=>"Ваша заявка отправлена."]));
 

@@ -11,9 +11,14 @@ export default function Searchbar () {
     const [status, setStatus] = useState(false);
 
     const search = (content) =>{
+        
         const temp = (queue !== null ? queue : content);
         setQueue(null);
-        fetch('http://localhost/api/user/getby-search?content='+temp, {method: 'GET', cache: "no-cache"})
+        if(temp.length < 3) {
+            setStatus(false);
+            return;
+        }
+        fetch('http://localhost/api/catalog/getby-search?content='+temp, {method: 'GET', cache: "no-cache"})
         .then(data=>{
             if(!data.ok) {
                 throw new Error();
@@ -33,7 +38,9 @@ export default function Searchbar () {
         if(!status && queue !== null) {
             const temp = queue;
             setQueue(null);
+            setStatus(true);
             search(temp);
+            
         }
     }, [status]);
 
@@ -57,6 +64,8 @@ export default function Searchbar () {
                                 search(target.value);
                             }, 2000);
                         }
+                    } else {
+                        setSearchMenuContent([]);
                     }
                 }}
             />

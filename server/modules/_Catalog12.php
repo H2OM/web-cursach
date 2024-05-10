@@ -113,7 +113,7 @@
             $query = substr_replace($query, '', -4) . $sort;
 
             try {
-                $page = isset($_GET['page']) ? ($_GET['page'] - 1) * 3 : 0;
+                $page = isset($_GET['page']) ? ($_GET['page'] - 1) * 6 : 0;
                 $pages = Db::getPreparedQuery("SELECT COUNT(*) as max FROM `catalog` " .$query, $params);
                 array_push($params, ["VALUE"=>$page, "PARAMVALUE"=>64]);
                 $result = Db::getPreparedQuery("SELECT * FROM `catalog` " .$query. " LIMIT ?, 6", $params);
@@ -135,5 +135,62 @@
                 die;
             }
 
+        }
+        protected function setRating () {
+            if(!isset($_GET['id']) || empty($_GET['id']) || !is_numeric($_GET['id'])) {header("HTTP/1.0 400 Bad Request"); die;}
+
+            if(!isset($_GET['mark']) || empty($_GET['mark']) || !is_numeric($_GET['mark']) || (strlen($_GET['mark']) > 1) || ($_GET['mark'] > 5))
+                {header("HTTP/1.0 400 Bad Request"); die;}
+            
+            $ips = json_decode(file_get_contents(DATA . 'rating.json', true), true);
+            
+            if($ips[$_GET['id']] === null) {header("HTTP/1.0 400 Bad Request"); die;}
+            
+            try {
+                $currentRating = Db::getPreparedQuery("SELECT rating, voices FROM catalog WHERE id = ?", 
+                    [["VALUE"=>HgetSafeString($_GET['id']), "PARAMVALUE"=>64]])[0];
+                if(empty($currentRating)) 
+                    {header("HTTP/1.0 400 Bad Request"); die;}
+                $newrating = '';
+                $query = "";
+                if(array_key_exists($_SERVER['REMOTE_ADDR'], $ips[$_GET['id']])) {
+                    $newrating = (($currentRating['rating'] * $currentRating['voices']) 
+                                    - ($ips[$_GET['id']][$_SERVER['REMOTE_ADDR']] - $_GET['mark'])) 
+                                    / ($currentRating['voices']);
+
+                    $query = "voices = ".($currentRating['voices']);
+
+                } else {
+                    $newrating = (($currentRating['rating'] * $currentRating['voices']) + $_GET['mark']) / ($currentRating['voices'] + 1);
+                    $query = "voices = ".($currentRating['voices'] + 1);
+                }
+
+                Db::getPreparedQuery("UPDATE `catalog` SET `rating`= ?, $query WHERE id = ?", 
+                    [["VALUE"=>HgetSafeString($newrating), "PARAMVALUE"=>64], ["VALUE"=>HgetSafeString($_GET['id']), "PARAMVALUE"=>64]]);
+                
+                $ips[$_GET['id']][$_SERVER['REMOTE_ADDR']] = $_GET['mark'];
+                file_put_contents(DATA . 'rating.json', json_encode($ips));
+
+                header("HTTP/1.0 200 OK");
+                die;
+
+            } catch (\Exception $e) {
+                header("HTTP/1.0 500 Internal Server Error");
+                die;
+            }
+        }
+        protected function getbySearch() {
+            if(!isset($_GET['content']) || empty($_GET['content']) || (strlen($_GET['content']) < 3 && strlen($_GET['content']) > 50))
+            {header("HTTP/1.0 400 Bad Request"); die;} 
+            try {
+                $s = "%" . HgetSafeString(mb_strtolower($_GET['content'], 'UTF-8')) . "%";
+                $result = Db::getPreparedQuery("SELECT title, article, image FROM catalog WHERE LOWER(title) LIKE BINARY ? OR  LOWER(city) LIKE BINARY ?",
+                    [["VALUE"=>$s, "PARAMVALUE"=>64], ["VALUE"=>$s, "PARAMVALUE"=>64]]);
+                exit(json_encode($result));
+
+            } catch (\Exception $e) {
+                header("HTTP/1.0 500 Internal Server Error");
+                die;
+            }
         }
     }

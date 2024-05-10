@@ -1,5 +1,5 @@
 .Voteform {
-    position: fixed;
+    position: absolute;
     display: none;
     top: 50vh;
     left: 50vw;
@@ -56,6 +56,12 @@
             border-radius: 8px;
             cursor: pointer;
             transition: 0.2s all;
+            &_e {
+                display: flex;
+                justify-content: space-between;
+                cursor:auto;
+                padding-right: 50px;
+            }
             &_selected {
                 background-color: rgb(229 229 229 / 56%);
             }
