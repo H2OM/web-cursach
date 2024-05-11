@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test form test render 1`] = `
+<div>
+  <form
+    class="Form__form"
+  >
+    <label
+      class="Form__form__input__error "
+      for="name"
+      role="error"
+    >
+      Неверный формат имени
+    </label>
+    <input
+      class="Form__form__input"
+      maxlength="70"
+      minlength="3"
+      name="name"
+      placeholder="Ваше имя"
+      required=""
+      type="text"
+      value=""
+    />
+    <label
+      class="Form__form__input__error "
+      for="email"
+      role="error"
+    >
+      Неверный формат почты
+    </label>
+    <input
+      class="Form__form__input"
+      name="mail"
+      placeholder="Ваша почта"
+      type="email"
+    />
+    <label
+      class="Form__form__input__error "
+      for="number"
+      role="error"
+    >
+      Неверный номер телефона
+    </label>
+    <input
+      class="Form__form__input"
+      data-target="имя"
+      name="number"
+      placeholder="Номер телефона"
+      type="text"
+    />
+    <textarea
+      class="Form__form__input Form__form__input_area"
+      cols="30"
+      maxlength="1200"
+      minlength="10"
+      name="question"
+      placeholder="Какой у вас вопрос?"
+      required=""
+      rows="10"
+    />
+    <div
+      class="Form__form__radio"
+    >
+      <label
+        class="Form__form__radio__label "
+        for="agreement"
+      >
+        Подтверждение обработки данных
+      </label>
+      <input
+        class="Form__form__input Form__form__input_radio"
+        name="agreement"
+        type="checkbox"
+      />
+    </div>
+    <button
+      class="Form__form__submit"
+      type="submit"
+    >
+      Отправить
+    </button>
+  </form>
+</div>
+`;

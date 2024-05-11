@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header render test 1`] = `
+<div>
+  <header
+    class="Header"
+  >
+    <div
+      class="Header__flex container container_head"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Logotype"
+          class="Header__flex__logo"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="0"
+          sizes="100vh"
+          src="/_next/image?url=%2Fimg%2Flogo_smal.png&w=3840&q=100"
+          srcset="/_next/image?url=%2Fimg%2Flogo_smal.png&w=16&q=100 16w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=32&q=100 32w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=48&q=100 48w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=64&q=100 64w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=96&q=100 96w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=128&q=100 128w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=256&q=100 256w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=384&q=100 384w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Flogo_smal.png&w=3840&q=100 3840w"
+          style="color: transparent;"
+          width="0"
+        />
+      </a>
+      <div
+        class="Header__flex__links"
+      >
+        <a
+          class="smalltitle Header__flex__links__link"
+          href="/catalog"
+        >
+          Каталог
+        </a>
+        <a
+          class="smalltitle Header__flex__links__link"
+          href="/news"
+        >
+          Новости
+        </a>
+        <a
+          class="smalltitle Header__flex__links__link"
+          href="/contacts"
+        >
+          Контакты
+        </a>
+      </div>
+      <div
+        class="Header__flex__options"
+      >
+        <div
+          class="Header__flex__options__block"
+        >
+          <input
+            class="Header__flex__options__input"
+            name="searching"
+            placeholder="Поиск..."
+            type="text"
+          />
+          <img
+            alt="magnifier"
+            class="Header__flex__options__icon"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="30"
+            src="/svg/icon_magnifier.svg"
+            style="color: transparent;"
+            width="30"
+          />
+        </div>
+        <div
+          class="Header__flex__options__block"
+          data-count="2"
+        >
+          <img
+            alt="star"
+            class="Header__flex__options__icon Header__flex__options__icon_star"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="30"
+            src="/svg/icon_star.svg"
+            style="color: transparent;"
+            width="30"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

@@ -10,6 +10,31 @@ export default function Voteform () {
     const [status, setStatus] = useState(false);
     const [select, setSelect] = useState(false);
 
+
+    const voteMenuSubmit = (e) =>{
+        e.preventDefault();
+        if(status === true && !select) return;
+        setStatus(true);
+        const formData = new FormData(e.target);
+        fetch('http://localhost/api/vote/set-vote', {method: 'POST', body: formData, cache: "no-cache"})
+            .then(data=>{
+                if(!data.ok) {
+                    throw new Error();
+                }
+                return data.json();
+            })
+            .then(data=>{
+                setStatus('voted');
+                setVoteMenu(data);
+                setNotification((current)=>({...current, message: "Ваш голос учтен"}));
+            })
+            .catch(()=>{
+                setNotification((current)=>({...current, status: false, message: 'Непредвиденная ошибка, попробуйте перезагрузить страницу.'}));
+                setVoteMenu(false);
+            })
+    }
+
+
     useEffect(()=>{
         if(voteMenu && Array.isArray(voteMenu)) {
             document.querySelector('body').style.overflow = "hidden";
@@ -34,29 +59,7 @@ export default function Voteform () {
 
                         })}
                     </div> :
-                    <form className="Voteform__form" onSubmit={(e)=>{
-                        e.preventDefault();
-                        if(status === true && !select) return;
-                        setStatus(true);
-                        const formData = new FormData(e.target);
-                        fetch('http://localhost/api/vote/set-vote', {method: 'POST', body: formData, cache: "no-cache"})
-                            .then(data=>{
-                                if(!data.ok) {
-                                    throw new Error();
-                                }
-                                return data.json();
-                            })
-                            .then(data=>{
-                                setStatus('voted');
-                                setVoteMenu(data);
-                                setNotification((current)=>({...current, message: "Ваш голос учтен"}));
-                            })
-                            .catch(()=>{
-                                setNotification((current)=>({...current, status: false, message: 'Непредвиденная ошибка, попробуйте перезагрузить страницу.'}));
-                                setVoteMenu(false);
-                            })
-                            
-                    }}>
+                    <form className="Voteform__form" onSubmit={voteMenuSubmit}>
                         {
                             Array.isArray(voteMenu) && voteMenu.map((each, i)=>{
 

@@ -32,7 +32,7 @@ export default async function Slider() {
     
     return (
         <section className="Slider">
-            <Movement slides={slides}/>
+            <Movement >{slides}</Movement>
         </section>
     )
 }

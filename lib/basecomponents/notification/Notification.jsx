@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext } from "react";
-import '../notification.scss';
+import './notification.scss';
 import ClientContext from "@/lib/context/ClientContext";
 
 export default function Notification() {

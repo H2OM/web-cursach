@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contacts snapshot 1`] = `
+<div>
+  <footer
+    class="Footer"
+  >
+    <div
+      class="container Footer__grid"
+    >
+      <div
+        class="Footer__block"
+      >
+        <img
+          alt="logo"
+          class="Footer__logo"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="0"
+          sizes="100vw"
+          src="/_next/image?url=%2Fimg%2Flogo_medium.png&w=3840&q=100"
+          srcset="/_next/image?url=%2Fimg%2Flogo_medium.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Flogo_medium.png&w=3840&q=100 3840w"
+          style="color: transparent;"
+          width="0"
+        />
+        <div
+          class="Footer__block__section"
+        >
+          <h3
+            class="subtitle"
+          >
+            Контакты
+          </h3>
+          <div
+            class="Footer__block__section__desc"
+            role="info"
+          >
+            TopAttractions@gmail.com
+          </div>
+          <div
+            class="Footer__block__section__desc"
+            role="info"
+          >
+            +7 900 111-11-11
+          </div>
+          <div
+            class="Footer__block__section__icons"
+          >
+            <img
+              alt="tg"
+              class="Footer__block__section__icons__icon"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              src="/svg/icon_telegram.svg"
+              style="color: transparent;"
+              width="0"
+            />
+            <img
+              alt="vk"
+              class="Footer__block__section__icons__icon"
+              data-nimg="1"
+              decoding="async"
+              fetchpriority="high"
+              height="0"
+              src="/svg/icon_vk.svg"
+              style="color: transparent;"
+              width="0"
+            />
+          </div>
+        </div>
+        <div
+          class="Footer__block__section"
+        >
+          <h3
+            class="subtitle"
+          >
+            Подпишитесь на новости
+          </h3>
+          <form
+            class="Miniform "
+          >
+            <div
+              class="Miniform__input__wrap "
+            >
+              <input
+                class="Miniform__input "
+                name="mail"
+                placeholder="Ваша почта"
+                required=""
+                type="text"
+              />
+              <label
+                class="Miniform__input__error "
+                for="email"
+              >
+                Неверный формат почты
+              </label>
+            </div>
+            <button
+              class="Miniform__button "
+              type="submit"
+            >
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="Footer__block Footer__block_second"
+      >
+        <a
+          class="Footer__block__link"
+          href="/"
+        >
+          Политика конфиденциальности
+        </a>
+        <div
+          class="Footer__block__section__desc"
+          href="/"
+          role="info"
+        >
+          © TopAttractions, 2024
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

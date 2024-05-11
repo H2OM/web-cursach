@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`searchmenu render test 1`] = `
+<div>
+  <div
+    class="Searchmenu Searchmenu_show"
+  >
+    <div
+      class="Searchmenu__list"
+    >
+      <div
+        class="Searchmenu__list__block"
+      >
+        <a
+          href="/catalog/test1article"
+        >
+          <img
+            alt="image"
+            class="Favmenu__list__block__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="300"
+            src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100"
+            srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=384&q=100 1x, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100 2x"
+            style="color: transparent;"
+            width="300"
+          />
+        </a>
+        test1
+      </div>
+      <div
+        class="Searchmenu__list__block"
+      >
+        <a
+          href="/catalog/test2article"
+        >
+          <img
+            alt="image"
+            class="Favmenu__list__block__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="300"
+            src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100"
+            srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=384&q=100 1x, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100 2x"
+            style="color: transparent;"
+            width="300"
+          />
+        </a>
+        test2
+      </div>
+      <div
+        class="Searchmenu__list__block"
+      >
+        <a
+          href="/catalog/test3article"
+        >
+          <img
+            alt="image"
+            class="Favmenu__list__block__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="300"
+            src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100"
+            srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=384&q=100 1x, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100 2x"
+            style="color: transparent;"
+            width="300"
+          />
+        </a>
+        test3
+      </div>
+      <div
+        class="Searchmenu__list__block"
+      >
+        <a
+          href="/catalog/test4article"
+        >
+          <img
+            alt="image"
+            class="Favmenu__list__block__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="300"
+            src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100"
+            srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=384&q=100 1x, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.jpg&w=640&q=100 2x"
+            style="color: transparent;"
+            width="300"
+          />
+        </a>
+        test4
+      </div>
+    </div>
+  </div>
+</div>
+`;

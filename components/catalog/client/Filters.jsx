@@ -9,18 +9,17 @@ export default function Filters({ cities }) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const params = new URLSearchParams(searchParams);
-    
     const [filterMenu, setFilterMenu] = useState(false);
     const [rating, setRating] = useState({ 
         min: (params.get('rating') && params.get('rating').split(',')[0]) || "", 
         max: (params.get('rating') && params.get('rating').split(',')[1]) || ""
     });
     const [selectedFilters, setSelectedFilters] = useState([]);
-
     useEffect(()=>{
         let temp = [];
         if(params.size > 0) {
             params.entries().forEach(each=>{
+                console.log(each);
                 if(each[0] != "rating") {
                     temp.push(each[1].split(',').map((key,i)=>{
                         if(key == "") return;
@@ -136,7 +135,7 @@ export default function Filters({ cities }) {
                 <div className="Filters__filtermenu__block">
                     <div className="Filters__filtermenu__block__title">Рейтинг:</div>
                     <div className="Filters__filtermenu__block__options Filters__filtermenu__block__options_rating">
-                        <input className="Filters__filtermenu__block__options__input" type="number" value={rating.min} onChange={({ target }) => {
+                        <input className="Filters__filtermenu__block__options__input" role='ratinginput' type="number" value={rating.min} onChange={({ target }) => {
 
                             if(target.value.length <=3 && Number(target.value) <= 5) {
                                 if(target.value != "" && rating.max != "" && Number(target.value) > rating.max) setRating((prev) => ({ ...prev, min: prev.max}));
@@ -144,7 +143,7 @@ export default function Filters({ cities }) {
                             }
                         }} />
                         —
-                        <input className="Filters__filtermenu__block__options__input" type="number" value={rating.max} onChange={({ target }) => {
+                        <input className="Filters__filtermenu__block__options__input" role='ratinginput' type="number" value={rating.max} onChange={({ target }) => {
 
                             if(target.value.length <=3 && Number(target.value) <= 5 ) {
                                 if(target.value != "" && Number(target.value) < rating.min) setRating((prev) => ({ ...prev, max: prev.min}));

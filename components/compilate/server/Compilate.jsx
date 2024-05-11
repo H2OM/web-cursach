@@ -23,8 +23,8 @@ export default async function Compilate () {
 
     const blocks = data.map((each, i)=>{
         return (
-            <div>
-                <div className="Compilate__blocks__block" key={each.title+i}>
+            <div key={each.title+i}>
+                <div className="Compilate__blocks__block" >
                     <Link href={'/catalog/'+each.article}>
                         <Image
                             src={"/img/" + each.image}
@@ -57,7 +57,7 @@ export default async function Compilate () {
         <section className="Compilate">
             <div className="container">
                 <Uptitle><h2 className="title">Подборка <br /> достопримечательностей</h2></Uptitle>
-                <Movement slides={blocks} blocks/>
+                <Movement blocks>{blocks}</Movement>
             </div>
         </section>
     )

@@ -20,8 +20,8 @@ export default function Footer () {
                     />
                     <div className="Footer__block__section">
                         <h3 className="subtitle">Контакты</h3>
-                        <div className="Footer__block__section__desc">TopAttractions@gmail.com</div>
-                        <div className="Footer__block__section__desc">+7 900 111-11-11</div>
+                        <div role='info' className="Footer__block__section__desc">TopAttractions@gmail.com</div>
+                        <div role='info' className="Footer__block__section__desc">+7 900 111-11-11</div>
                         <div className="Footer__block__section__icons">
                             <Image
                                 src="/svg/icon_telegram.svg"
@@ -53,7 +53,7 @@ export default function Footer () {
                 </div>
                 <div className="Footer__block Footer__block_second">
                     <Link className="Footer__block__link" href={"/"}>Политика конфиденциальности</Link>
-                    <div className="Footer__block__section__desc" href={"/"}>© TopAttractions, 2024</div>
+                    <div role='info' className="Footer__block__section__desc" href={"/"}>© TopAttractions, 2024</div>
                 </div>
             </div>
         </footer>

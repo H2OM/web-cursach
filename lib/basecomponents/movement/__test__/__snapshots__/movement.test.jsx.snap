@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movement render test 1`] = `
+<div>
+  <div
+    class="Movement__wrap"
+  >
+    <div
+      class="Movement__slider"
+      style="transform: translateX(-0%);"
+    >
+      <div>
+        first
+      </div>
+      <div>
+        second
+      </div>
+      <div>
+        third
+      </div>
+    </div>
+    <nav
+      class="Movement__nav"
+    >
+      <div
+        class="Movement__nav__point Movement__nav__point_select"
+        role="navRadio"
+      />
+      <div
+        class="Movement__nav__point "
+        role="navRadio"
+      />
+      <div
+        class="Movement__nav__point "
+        role="navRadio"
+      />
+    </nav>
+  </div>
+</div>
+`;

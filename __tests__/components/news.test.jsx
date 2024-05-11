@@ -1,7 +1,7 @@
 import customRender from "@/__mocks__/customRender";
 import News from "@/components/news/server/News";
 import 'intersection-observer';
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import settingFetchResult from "@/__mocks__/fetchMock";
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
@@ -15,13 +15,6 @@ useSearchParams.mockReturnValue({});
 describe('news',()=>{
 
     it('full news', async ()=>{
-        settingFetchResult([]);
-        customRender(await News({full: true}), {});
-        expect(await screen.findByText('Нет новостей')).toBeInTheDocument();
-        expect(await screen.findByRole('anchor')).toBeInTheDocument();
-        settingFetchResult(false);
-        customRender(await News({full: true}), {});
-        expect(await screen.findByText('Ошибка загрузки')).toBeInTheDocument();
         const titles = ['some1', 'some2', 'some3'];
         settingFetchResult([
             {
@@ -48,13 +41,21 @@ describe('news',()=>{
             expect(await screen.findByText(title)).toBeInTheDocument();
         }
         expect(container).toMatchSnapshot();
-        
     });
     it('lite news', async ()=>{
         settingFetchResult([]);
         customRender(await News({full: false}), {});
         expect(await screen.findByText('Смотреть все новости')).toBeInTheDocument();
         expect(await screen.findByRole('arrow')).toBeInTheDocument();
+    });
+    it('full news exeptions', async ()=>{
+        settingFetchResult([]);
+        customRender(await News({full: true}), {});
+        expect(await screen.findByText('Нет новостей')).toBeInTheDocument();
+        expect(await screen.findByRole('anchor')).toBeInTheDocument();
+        settingFetchResult(false);
+        customRender(await News({full: true}), {});
+        expect(await screen.findByText('Ошибка загрузки')).toBeInTheDocument();
     });
 });
 

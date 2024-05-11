@@ -33,8 +33,7 @@ export default async function Catalog ({searchParams}) {
     
     let [data, cities] = await Promise.all([getData(), getCities()]);
 
-
-    if(!data || data.data === undefined) {
+    if(!data || data.data === undefined || !Array.isArray(data.data)) {
         return notFound();
     }
     const blocks = data.data.map((each, i)=>{

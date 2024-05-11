@@ -25,7 +25,6 @@ export default function LazyLoad ({ val }) {
             setStatus(true);
         }
     }, [inView]);
-
     return (
         <>
             {status === true ? <Loader/> : null}

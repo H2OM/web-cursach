@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pagination test render test 1`] = `
+<div>
+  <nav
+    class="Catalog__nav"
+  >
+    <div
+      class="Catalog__nav__point"
+    >
+      1
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      6
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      7
+    </div>
+    <div
+      class="Catalog__nav__point Catalog__nav__point_select"
+    >
+      8
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      9
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      10
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      11
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      12
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      13
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      40
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`pagination test render test end 1`] = `
+<div>
+  <nav
+    class="Catalog__nav"
+  >
+    <div
+      class="Catalog__nav__point"
+    >
+      1
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      34
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      35
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      36
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      37
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      38
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      39
+    </div>
+    <div
+      class="Catalog__nav__point Catalog__nav__point_select"
+    >
+      40
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`pagination test render test middle 1`] = `
+<div>
+  <nav
+    class="Catalog__nav"
+  >
+    <div
+      class="Catalog__nav__point"
+    >
+      1
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      6
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      7
+    </div>
+    <div
+      class="Catalog__nav__point Catalog__nav__point_select"
+    >
+      8
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      9
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      10
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      11
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      12
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      13
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      40
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`pagination test render test start 1`] = `
+<div>
+  <nav
+    class="Catalog__nav"
+  >
+    <div
+      class="Catalog__nav__point Catalog__nav__point_select"
+    >
+      1
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      2
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      3
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      4
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      5
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      6
+    </div>
+    <div
+      class="Catalog__nav__space"
+    >
+      ...
+    </div>
+    <div
+      class="Catalog__nav__point"
+    >
+      40
+    </div>
+  </nav>
+</div>
+`;

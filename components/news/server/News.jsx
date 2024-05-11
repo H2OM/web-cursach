@@ -9,14 +9,13 @@ export default async function News ({full = false, searchParams = false}) {
     const count = (searchParams.count ?? 3);
     const data = await fetch(`http://127.0.0.1/api/news/${full ? `get-news?count=${count}` : 'last-news'}`, {method: 'GET', cache: "no-cache"})
     .then(data=>{
-        
         if(!data.ok) {
             return false;
 
         }
         return data.json();
     }).catch(()=>false);
-
+    
     return (
         <section className="News">
             <div className="container">

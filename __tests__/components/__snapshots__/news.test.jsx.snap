@@ -15,7 +15,7 @@ exports[`news full news 1`] = `
           class="Uptitle__anchorUpUptitle__anchorUp_full "
         />
         <div
-          class="Uptitle Uptitle_full Uptitle_show"
+          class="Uptitle Uptitle_full "
         >
           <h2
             class="title"
@@ -149,22 +149,6 @@ exports[`news full news 1`] = `
               width="0"
             />
           </div>
-        </div>
-        <div
-          class="Loader"
-        >
-          <div
-            class="Loader__point"
-            style="animation-delay: 0s;"
-          />
-          <div
-            class="Loader__point"
-            style="animation-delay: 0.3s;"
-          />
-          <div
-            class="Loader__point"
-            style="animation-delay: 0.6s;"
-          />
         </div>
         <div
           class="News__blocks__loadAnchor"

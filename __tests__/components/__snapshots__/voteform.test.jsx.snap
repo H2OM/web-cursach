@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test voteform test render 1`] = `
+<div>
+  <div
+    class="Voteform Voteform_show"
+  >
+    <button
+      class="Voteform__close"
+    />
+    <h2
+      class="subtitle"
+    >
+      Проголосуйте за лучшую достопримечательность
+    </h2>
+    <form
+      class="Voteform__form"
+    >
+      <label
+        class="Voteform__form__block "
+        for="testcity10"
+      >
+        <input
+          class="Voteform__form__block__input"
+          id="testcity10"
+          name="voice"
+          type="radio"
+          value="testcity1"
+        />
+        testcity1
+      </label>
+      <label
+        class="Voteform__form__block "
+        for="testcity21"
+      >
+        <input
+          class="Voteform__form__block__input"
+          id="testcity21"
+          name="voice"
+          type="radio"
+          value="testcity2"
+        />
+        testcity2
+      </label>
+      <label
+        class="Voteform__form__block "
+        for="testcity32"
+      >
+        <input
+          class="Voteform__form__block__input"
+          id="testcity32"
+          name="voice"
+          type="radio"
+          value="testcity3"
+        />
+        testcity3
+      </label>
+      <button
+        class="Voteform__form__submit"
+        type="submit"
+      >
+        Проголосовать
+      </button>
+    </form>
+  </div>
+</div>
+`;

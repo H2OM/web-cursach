@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test miniform test render 1`] = `
+<div>
+  <form
+    class="Miniform "
+  >
+    <div
+      class="Miniform__input__wrap "
+    >
+      <input
+        class="Miniform__input "
+        name="mail"
+        placeholder="Ваша почта"
+        required=""
+        type="text"
+      />
+      <label
+        class="Miniform__input__error "
+        for="email"
+      >
+        Неверный формат почты
+      </label>
+    </div>
+    <button
+      class="Miniform__button "
+      type="submit"
+    >
+      Подписаться
+    </button>
+  </form>
+</div>
+`;

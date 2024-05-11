@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import "@/scss/global.scss";
 import Header from '@/components/header/server/Header';
 import Footer from '@/components/footer/server/Footer';
-import Notification from '@/components/notification/client/Notification';
+import Notification from '@/lib/basecomponents/notification/Notification';
 import Favmenu from '@/lib/basecomponents/favmenu/favmenu';
 import SearchMenu from '@/lib/basecomponents/searchmenu/searchmenu';
 import Voteform from '@/components/voteform/client/Voteform';

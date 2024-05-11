@@ -34,7 +34,7 @@ export default function Pagination ({page, max}) {
                                     </> : 
                                     Array.from({length: (6 - (max - page))}).map((_, i)=>{    //перед
                                         return (
-                                            <div className="Catalog__nav__point" key={i}>{page-(6 - (max-page))+i}</div>
+                                            <div className="Catalog__nav__point" key={10+i}>{page-(6 - (max-page))+i}</div>
                                         )
                                     }) 
                             }
@@ -43,7 +43,7 @@ export default function Pagination ({page, max}) {
                         :
                         Array.from({length: page}).map((_, i)=>{ 
                             return (
-                                <div className={"Catalog__nav__point" + ((page == i+1) ? " Catalog__nav__point_select" : "")} key={i}>{i+1}</div>
+                                <div className={"Catalog__nav__point" + ((page == i+1) ? " Catalog__nav__point_select" : "")} key={20+i}>{i+1}</div>
                             )
                         }) 
                 }
@@ -51,7 +51,7 @@ export default function Pagination ({page, max}) {
                     Array.from({length: ((max - page) < 7 ? max - page : 5)}).map((_, i)=>{ //после
                                                 
                         return (
-                            <div className="Catalog__nav__point" key={i}>{page+i+1}</div>
+                            <div className="Catalog__nav__point" key={30+i}>{page+i+1}</div>
                         )
                     }) 
                 }

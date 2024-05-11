@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider testing slider success testing 1`] = `
+<div>
+  <section
+    class="Slider"
+  >
+    <div
+      class="Movement__wrap"
+    >
+      <div
+        class="Movement__slider"
+        style="transform: translateX(-0%);"
+      >
+        <div
+          class="Slider__slider__slide"
+        >
+          <div
+            class="container"
+          >
+            <h1
+              class="title title_slide"
+            >
+              one1
+            </h1>
+          </div>
+          <img
+            alt="slide"
+            class="Slider__slider__slide__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="0"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fsome0&w=3840&q=100"
+            srcset="/_next/image?url=%2Fimg%2Fsome0&w=640&q=100 640w, /_next/image?url=%2Fimg%2Fsome0&w=750&q=100 750w, /_next/image?url=%2Fimg%2Fsome0&w=828&q=100 828w, /_next/image?url=%2Fimg%2Fsome0&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Fsome0&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Fsome0&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Fsome0&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Fsome0&w=3840&q=100 3840w"
+            style="color: transparent;"
+            width="0"
+          />
+        </div>
+        <div
+          class="Slider__slider__slide"
+        >
+          <div
+            class="container"
+          >
+            <h1
+              class="title title_slide"
+            >
+              one2
+            </h1>
+          </div>
+          <img
+            alt="slide"
+            class="Slider__slider__slide__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="0"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fsome1&w=3840&q=100"
+            srcset="/_next/image?url=%2Fimg%2Fsome1&w=640&q=100 640w, /_next/image?url=%2Fimg%2Fsome1&w=750&q=100 750w, /_next/image?url=%2Fimg%2Fsome1&w=828&q=100 828w, /_next/image?url=%2Fimg%2Fsome1&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Fsome1&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Fsome1&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Fsome1&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Fsome1&w=3840&q=100 3840w"
+            style="color: transparent;"
+            width="0"
+          />
+        </div>
+        <div
+          class="Slider__slider__slide"
+        >
+          <div
+            class="container"
+          >
+            <h1
+              class="title title_slide"
+            >
+              one3
+            </h1>
+          </div>
+          <img
+            alt="slide"
+            class="Slider__slider__slide__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="0"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fsome2&w=3840&q=100"
+            srcset="/_next/image?url=%2Fimg%2Fsome2&w=640&q=100 640w, /_next/image?url=%2Fimg%2Fsome2&w=750&q=100 750w, /_next/image?url=%2Fimg%2Fsome2&w=828&q=100 828w, /_next/image?url=%2Fimg%2Fsome2&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Fsome2&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Fsome2&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Fsome2&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Fsome2&w=3840&q=100 3840w"
+            style="color: transparent;"
+            width="0"
+          />
+        </div>
+        <div
+          class="Slider__slider__slide"
+        >
+          <div
+            class="container"
+          >
+            <h1
+              class="title title_slide"
+            >
+              one4
+            </h1>
+          </div>
+          <img
+            alt="slide"
+            class="Slider__slider__slide__image"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="0"
+            sizes="100vw"
+            src="/_next/image?url=%2Fimg%2Fsome3&w=3840&q=100"
+            srcset="/_next/image?url=%2Fimg%2Fsome3&w=640&q=100 640w, /_next/image?url=%2Fimg%2Fsome3&w=750&q=100 750w, /_next/image?url=%2Fimg%2Fsome3&w=828&q=100 828w, /_next/image?url=%2Fimg%2Fsome3&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2Fsome3&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2Fsome3&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2Fsome3&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2Fsome3&w=3840&q=100 3840w"
+            style="color: transparent;"
+            width="0"
+          />
+        </div>
+      </div>
+      <nav
+        class="Movement__nav"
+      >
+        <div
+          class="Movement__nav__point Movement__nav__point_select"
+          role="navRadio"
+        />
+        <div
+          class="Movement__nav__point "
+          role="navRadio"
+        />
+        <div
+          class="Movement__nav__point "
+          role="navRadio"
+        />
+        <div
+          class="Movement__nav__point "
+          role="navRadio"
+        />
+      </nav>
+    </div>
+  </section>
+</div>
+`;
