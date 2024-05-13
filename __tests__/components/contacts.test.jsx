@@ -3,8 +3,6 @@ import 'intersection-observer';
 import customRender from '@/__mocks__/customRender';
 import { screen } from '@testing-library/react';
 
-
-
 it('contacts snapshot', async () => {
   const {container} = customRender(<Contacts/>, {});
   const images = screen.getAllByRole('img');

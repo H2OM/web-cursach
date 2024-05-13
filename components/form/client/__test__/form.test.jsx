@@ -11,9 +11,20 @@ const notifications = {
     }
 }
 
+const delegation = ()=>{
+    return {
+        name: screen.getByPlaceholderText('Ваше имя'),
+        mail: screen.getByPlaceholderText('Ваша почта'),
+        text: screen.getByPlaceholderText('Какой у вас вопрос?'),
+        submit: screen.getByRole('button'),
+        mailerror: screen.getAllByRole('error')[1],
+        checkbox: screen.getByRole('checkbox'),
+        number: screen.getByPlaceholderText('Номер телефона')
+    }
+}
+
 describe('test form', ()=>{
     settingFetchResult({message:"done"});
-    
     it('test render', async ()=>{
         const {container} = customRender(<ClientForm/>, {providerProps: notifications});
         const errors = screen.getAllByRole('error');
@@ -21,6 +32,7 @@ describe('test form', ()=>{
        
         expect(errors.length).toBe(3);
         expect(inputs.length).toBe(4);
+
         expect(screen.getByRole('checkbox')).toBeInTheDocument();
         expect(screen.getByRole('button')).toBeInTheDocument();
     
@@ -29,12 +41,7 @@ describe('test form', ()=>{
     });
     it('functional test - success way',async ()=>{
         customRender(<ClientForm/>, {providerProps: notifications});
-        const name = screen.getByPlaceholderText('Ваше имя');
-        const mail = screen.getByPlaceholderText('Ваша почта');
-        const number = screen.getByPlaceholderText('Номер телефона');
-        const text = screen.getByPlaceholderText('Какой у вас вопрос?');
-        const submit = screen.getByRole('button');
-        const checkbox = screen.getByRole('checkbox');
+        const {name, mail, number, text, submit, checkbox} = delegation();
 
         await userEvent.type(name, 'Имя');
         await userEvent.type(mail, 'example@mail.ru');
@@ -52,10 +59,7 @@ describe('test form', ()=>{
     });
     it('functional test - rejected due to checkbox',async ()=>{
         customRender(<ClientForm/>, {providerProps: notifications});
-        const name = screen.getByPlaceholderText('Ваше имя');
-        const mail = screen.getByPlaceholderText('Ваша почта');
-        const text = screen.getByPlaceholderText('Какой у вас вопрос?');
-        const submit = screen.getByRole('button');
+        const { name, mail, text, submit } = delegation();
 
         await userEvent.type(name, 'Имя');
         await userEvent.type(mail, 'example@mail.ru');
@@ -68,12 +72,7 @@ describe('test form', ()=>{
     it('functional test - rejected due to wrong mail',async ()=>{
         
         customRender(<ClientForm/>, {providerProps: notifications});
-        const name = screen.getByPlaceholderText('Ваше имя');
-        const mail = screen.getByPlaceholderText('Ваша почта');
-        const text = screen.getByPlaceholderText('Какой у вас вопрос?');
-        const submit = screen.getByRole('button');
-        const mailerror = screen.getAllByRole('error')[1];
-        const checkbox = screen.getByRole('checkbox');
+        const {name, mail, text, submit, checkbox, mailerror} = delegation();
         
         await userEvent.type(name, 'Имя');
         await userEvent.type(mail, 'example@mailru');
@@ -81,11 +80,13 @@ describe('test form', ()=>{
 
         await userEvent.click(checkbox);
         await userEvent.click(submit);
+
         expect(mail).toHaveValue("example@mailru");
         expect(mailerror.className.includes('Form__form__input__error_show')).toBeTruthy();
 
         await userEvent.clear(mail);
         await userEvent.type(mail, 'example@mail.ru');
+
         expect(mailerror.className.includes('Form__form__input__error_show')).toBeFalsy();
 
         await userEvent.click(submit);
@@ -94,11 +95,9 @@ describe('test form', ()=>{
     });
     it('functional test - test wrong name',async ()=>{
         customRender(<ClientForm/>, {providerProps: notifications});
-        const name = screen.getByPlaceholderText('Ваше имя');
+        const { name } = delegation();
 
         await userEvent.type(name, 'Имя4223');
         expect(name).toHaveValue("Имя");
-        
     });
-    
 });

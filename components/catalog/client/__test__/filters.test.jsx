@@ -12,7 +12,7 @@ const urlparams = new URLSearchParams("rating=1,2&cities=city1,second&fav=true&s
 global.URLSearchParams = jest.fn(x => (urlparams));
 
 describe('test filters', ()=>{
-    it('filters', async ()=>{
+    it('filters render', async ()=>{
         const cities = ['city1', 'city2', 'city3'];
         const {container} = render(<Filters cities={cities}/> )
         for(let city of cities) {

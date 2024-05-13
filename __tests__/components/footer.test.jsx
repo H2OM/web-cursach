@@ -1,12 +1,9 @@
-import Contacts from '@/components/contacts/server/Contacts';
 import 'intersection-observer';
 import customRender from '@/__mocks__/customRender';
 import Footer from '@/components/footer/server/Footer';
 import { screen } from '@testing-library/react';
 
-
-
-it('contacts snapshot', async () => {
+it('footer snapshot', async () => {
     const {container} = customRender(<Footer/>, {});
     const images = screen.getAllByRole('img');
     const titles = screen.getAllByRole('heading');

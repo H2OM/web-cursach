@@ -13,29 +13,18 @@ usePathname.mockReturnValue("localhost");
 useSearchParams.mockReturnValue({});
 
 describe('news',()=>{
-
     it('full news', async ()=>{
         const titles = ['some1', 'some2', 'some3'];
-        settingFetchResult([
-            {
+
+        settingFetchResult(titles.map((each,i)=>{
+            return  {
                 date: "22.02.22",
-                title: titles[0],
-                text: "sometext",
-                image: "/img/image.png"
-            },
-            {
-                date: "22.02.52",
-                title: titles[1],
-                text: "sometext2",
-                image: "/img/image.png"
-            },
-            {
-                date: "22.02.24",
-                title: titles[2],
-                text: "sometex4t",
-                image: "/img/image.png"
-            },
-        ]);
+                title: each,
+                text: "text"+each,
+                image: `/img/image${i}.png`
+            }
+            
+        })); 
         const {container} = customRender(await News({full: true}), {});
         for(let title of titles) {
             expect(await screen.findByText(title)).toBeInTheDocument();

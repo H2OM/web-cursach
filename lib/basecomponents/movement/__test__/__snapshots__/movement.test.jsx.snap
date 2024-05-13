@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`movement render test 1`] = `
+exports[`movement test render test 1`] = `
 <div>
   <div
     class="Movement__wrap"
   >
     <div
       class="Movement__slider"
+      role="wrap"
       style="transform: translateX(-0%);"
     >
       <div>

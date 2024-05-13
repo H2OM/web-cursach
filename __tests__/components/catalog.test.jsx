@@ -14,47 +14,30 @@ useSearchParams.mockReturnValue({});
 
 const context = {
     favorites: {
-        5: ["Озеро Сукко", "Ozero Sukko", "catalog/kiparis_ozero.webp"],
+        2: ["Озеро Сукко", "Ozero Sukko", "catalog/kiparis_ozero.webp"],
     }
 } 
 
 describe('catalog testing', ()=>{
     it('catalog test',async ()=>{
         const blocks = ['one1', 'Озеро Сукко', 'one3']; 
+        const cities = blocks.map((each, i)=>{
+            return {
+                article: each+i,
+                image: '/img/image1.jpg',
+                title: each,
+                id: i,
+                text: 'sometext',
+                rating: 5,
+                voices: 3
+            }
+        });
         function callback(recived) {
             if(recived.includes('catalog/get-cities')) {
                 return ['somecity'];
             
             } else if (recived.includes('catalog/get-catalog')) {
-                return {data: [
-                    {
-                        article: 'one1',
-                        image: '/img/image1.jpg',
-                        title: blocks[0],
-                        id: 3,
-                        text: 'sometext',
-                        rating: 5,
-                        voices: 3
-                    },
-                    {
-                        article: 'Ozero Sukko',
-                        image: 'catalog/kiparis_ozero.webp',
-                        title: blocks[1],
-                        id: 5,
-                        text: 'sometext',
-                        rating: 5,
-                        voices: 3
-                    },
-                    {
-                        article: 'one3',
-                        image: '/img/image1.jpg',
-                        title: blocks[2],
-                        id: 1,
-                        text: 'sometext',
-                        rating: 5,
-                        voices: 3
-                    },
-                ]};
+                return {data: cities};
             }
         }
         settingFetchResult([], callback);
@@ -64,6 +47,5 @@ describe('catalog testing', ()=>{
         }
         expect(container).toMatchSnapshot();
     });
-
 });
 

@@ -53,7 +53,7 @@ exports[`news full news 1`] = `
             <div
               class="News__blocks__block__desc"
             >
-              sometext
+              textsome1
             </div>
             <img
               alt="image"
@@ -63,8 +63,8 @@ exports[`news full news 1`] = `
               fetchpriority="high"
               height="0"
               sizes="100vw"
-              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
-              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage0.png&w=3840&q=100 3840w"
               style="color: transparent;"
               width="0"
             />
@@ -84,7 +84,7 @@ exports[`news full news 1`] = `
             <div
               class="News__blocks__block__date"
             >
-              22.02.52
+              22.02.22
             </div>
           </div>
           <div
@@ -93,7 +93,7 @@ exports[`news full news 1`] = `
             <div
               class="News__blocks__block__desc"
             >
-              sometext2
+              textsome2
             </div>
             <img
               alt="image"
@@ -103,8 +103,8 @@ exports[`news full news 1`] = `
               fetchpriority="high"
               height="0"
               sizes="100vw"
-              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
-              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage1.png&w=3840&q=100 3840w"
               style="color: transparent;"
               width="0"
             />
@@ -124,7 +124,7 @@ exports[`news full news 1`] = `
             <div
               class="News__blocks__block__date"
             >
-              22.02.24
+              22.02.22
             </div>
           </div>
           <div
@@ -133,7 +133,7 @@ exports[`news full news 1`] = `
             <div
               class="News__blocks__block__desc"
             >
-              sometex4t
+              textsome3
             </div>
             <img
               alt="image"
@@ -143,8 +143,8 @@ exports[`news full news 1`] = `
               fetchpriority="high"
               height="0"
               sizes="100vw"
-              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100"
-              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage.png&w=3840&q=100 3840w"
+              src="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=3840&q=100"
+              srcset="/_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=640&q=100 640w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=750&q=100 750w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=828&q=100 828w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=1080&q=100 1080w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=1200&q=100 1200w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=1920&q=100 1920w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=2048&q=100 2048w, /_next/image?url=%2Fimg%2F%2Fimg%2Fimage2.png&w=3840&q=100 3840w"
               style="color: transparent;"
               width="0"
             />

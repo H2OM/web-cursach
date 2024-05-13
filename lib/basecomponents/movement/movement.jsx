@@ -7,7 +7,7 @@ export default function Movement ({children, blocks = false}) {
     
     return (
         <div className="Movement__wrap">
-            <div className={blocks ? "Movement__blocks" : "Movement__slider"} 
+            <div role='wrap' className={blocks ? "Movement__blocks" : "Movement__slider"} 
                 style={(blocks && current > 0) ? 
                     {transform: `translateX(calc(-${100*current}% - ${(((current+1) * 3) == children.length) ? '160px' : '80px'}))`} 
                     : {transform: `translateX(-${100*current}%)`}}
