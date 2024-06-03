@@ -1,6 +1,7 @@
 <?php
     use app\Router;
     use app\Db;
+
     require_once "./settings/config.php";
     require_once LIB . "functions.php";
     $Routing = new Router();

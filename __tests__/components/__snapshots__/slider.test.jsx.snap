@@ -10,6 +10,7 @@ exports[`Slider testing slider success testing 1`] = `
     >
       <div
         class="Movement__slider"
+        role="wrap"
         style="transform: translateX(-0%);"
       >
         <div
