@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Июн 05 2024 г., 19:31
+-- Время создания: Июн 05 2024 г., 20:14
 -- Версия сервера: 8.2.0
 -- Версия PHP: 8.3.1
 
@@ -72,8 +72,8 @@ INSERT INTO `catalog` (`id`, `image`, `title`, `article`, `text`, `rating`, `voi
 CREATE TABLE `incoming` (
   `id` int NOT NULL,
   `user_mail` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `user_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `user_number` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `user_name` char(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -82,22 +82,12 @@ CREATE TABLE `incoming` (
 -- Дамп данных таблицы `incoming`
 --
 
-INSERT INTO `incoming` (`id`, `user_mail`, `user_name`, `user_number`, `text`, `date`) VALUES
-(1, 'DFA@MAIL.TU', '+2 (315) 151-51-51', 'РПЫРЫРЫ', 'SDBNSBDNSFNSFBAN', '2024-04-22 16:10:08'),
+INSERT INTO `incoming` (`id`, `user_mail`, `user_number`, `user_name`, `text`, `date`) VALUES
 (2, 'dmitrii@mail.ru', '+4 (121) 515-15-15', 'Дмитрий', 'Дмитрий вопрос', '2024-04-22 16:19:07'),
-(3, 'dmitrii@mail.ru', '+4 (121) 515-15-15', 'Дмитрий', 'Дмитрий вопрос', '2024-04-22 16:22:12'),
 (4, 'dima.za2512@mail.ru', '+2 (141) 241-41-41', 'фафпафпф', 'афафафыафыафафаф', '2024-04-24 12:24:52'),
-(5, 'dima.za2512@mail.ru', 'Дмитрий', NULL, 'ывфафпфпфпф', '2024-04-30 18:41:50'),
-(6, 'dima.za2512@mail.ru', 'ДмитрийАлексеевич', NULL, 'ывфафпфпфпф', '2024-04-30 18:42:13'),
-(7, 'dima.za2512@mail.ru', 'ДмитрийАлексеевич', NULL, 'ывфафпфпфпф', '2024-04-30 18:42:38'),
-(8, 'dima.za2512@mail.ru', 'Дмитрий Алексеевич', NULL, 'ывфафпфпфпф', '2024-04-30 18:42:51'),
-(9, 'dima.za2512@mail.ru', 'Дмитрий Алексеевич', NULL, 'ывфафпфпфпф', '2024-04-30 18:43:45'),
-(10, 'dima.za2512@mail.ru', '+5 (114) 425-25-24', 'Дмитрий Алексеевич', 'ывфафпфпфпф', '2024-04-30 18:44:28'),
-(11, 'dima.za2512@mail.ru', '+5 (114) 425-25-24', 'Дмитрий Алексеевич', 'ывфафпфпфпф', '2024-04-30 18:44:42'),
-(12, 'dima.za2512@mail.ru', 'Дмитрий Алексеевич Заболотнов', NULL, 'вфвфафафаввыв', '2024-05-09 07:16:51'),
-(13, 'example@ma.ru', 'имя', NULL, 'афафафафафаф', '2024-05-11 12:33:05'),
+(13, 'example@ma.ru', '', 'имя', 'афафафафафаф', '2024-05-11 12:33:05'),
 (14, 'daa@mail.ru', '+7 (918) 219-75-75', 'Дмитрий', 'afegfagaga', '2024-06-04 11:23:23'),
-(15, 'daf@mail.rt', 'Ден Лох', NULL, 'adga;glja;lgj;lj', '2024-06-04 11:24:30');
+(15, 'daf@mail.rt', '', 'Ден Лох', 'adga;glja;lgj;lj', '2024-06-04 11:24:30');
 
 -- --------------------------------------------------------
 
@@ -180,11 +170,13 @@ CREATE TABLE `voting` (
 --
 
 INSERT INTO `voting` (`ip`, `city`) VALUES
-(2130706433, 'Олимпийский парк'),
 (2130771970, 'Парк Краснодар'),
-(2719940660, 'Олимпийский парк'),
-(2821914626, 'Парк Краснодар'),
-(3140157448, 'Красная поляна');
+(2130772486, 'Красная поляна'),
+(2130773250, 'Олимпийский парк'),
+(2130774274, 'Парк Краснодар'),
+(2130837506, 'Красная поляна'),
+(2131165186, 'Олимпийский парк'),
+(2131296258, 'Парк Краснодар');
 
 -- --------------------------------------------------------
 
@@ -236,8 +228,8 @@ ALTER TABLE `catalog` ADD FULLTEXT KEY `catalogtext` (`text`);
 ALTER TABLE `incoming`
   ADD PRIMARY KEY (`id`),
   ADD KEY `username` (`user_mail`),
-  ADD KEY `usermail` (`user_name`),
-  ADD KEY `usernum` (`user_number`);
+  ADD KEY `usermail` (`user_number`),
+  ADD KEY `usernum` (`user_name`);
 ALTER TABLE `incoming` ADD FULLTEXT KEY `usertext` (`text`);
 
 --
@@ -286,7 +278,7 @@ ALTER TABLE `catalog`
 -- AUTO_INCREMENT для таблицы `incoming`
 --
 ALTER TABLE `incoming`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблицы `news`
@@ -304,7 +296,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT для таблицы `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

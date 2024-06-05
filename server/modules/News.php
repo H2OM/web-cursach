@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _News32 extends Runner {
+    class News extends Runner {
 
         protected function lastNews() {
 

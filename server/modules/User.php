@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _User35 extends Runner {
+    class User extends Runner {
 
         private $temp;
 

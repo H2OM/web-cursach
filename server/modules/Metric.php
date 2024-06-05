@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _Metric4 extends Runner {  // Только уникальные пользователи
+    class Metric extends Runner {  // Только уникальные пользователи
         
         protected function increaseCatalog () { $this->increase("catalog"); }
 

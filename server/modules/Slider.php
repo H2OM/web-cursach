@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _Slider65 extends Runner {
+    class Slider extends Runner {
 
         protected function getSlider () {
 

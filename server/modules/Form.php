@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _Form98 extends Runner {
+    class Form extends Runner {
         
         private $data;
 
@@ -92,8 +92,8 @@
                 }
 
                 $query = (count($this->data) == 5 
-                    ? "(`user_mail`, `user_number`, `user_name`, `text`) VALUES (?, ?, ?, ?)" 
-                    : "(`user_name`, `user_mail`, `text`) VALUES (?, ?, ?)");
+                    ? "(`user_mail`, `user_name`, `user_number`, `text`) VALUES (?, ?, ?, ?)" 
+                    : "(`user_mail`, `user_name`, `text`) VALUES (?, ?, ?)");
 
                 Db::getPreparedQuery("INSERT INTO `incoming` ". $query, $params);
 

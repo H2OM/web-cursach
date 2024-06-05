@@ -40,14 +40,13 @@
                 $FKAAN ? $out[array_shift($row)] = $row : array_push($out, $row);
             }
 
-            $isResultAnArray = (!empty($out) && is_array($out[array_key_first($out)]));
+            $isFirstKeyAnArray = (!empty($out) && is_array($out[array_key_first($out)]));
 
-            if(!$isResultAnArray || ($ARRAY_ONLY && empty($out))) {
-
+            if(!$isFirstKeyAnArray || ($ARRAY_ONLY && empty($out))) {
                 $out = [$out];
-                return $out;
             }
-                
+
+            return $out;
         }
         public static function getPreparedQuery($request, $parrametrs = [], $count = false, $FKAAN = false) {
 

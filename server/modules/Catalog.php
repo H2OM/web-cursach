@@ -4,7 +4,7 @@
 
     use app\Db;
 
-    class _Catalog12 extends Runner {
+    class Catalog extends Runner {
 
         protected function mainRating() {
 

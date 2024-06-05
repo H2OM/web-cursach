@@ -4,16 +4,16 @@
 
     use app\Db;
 
-    class _Vote66 extends Runner {
-
+    class Vote extends Runner {
+        
         protected function checkVote () {
 
             try {
-
                 $ip = Db::getQuery("SELECT ip FROM `voting` WHERE ip = INET_ATON('".$_SERVER['REMOTE_ADDR']."')");
 
-                if(empty($ip)) {
+                $ip = $ip[0];
 
+                if(empty($ip)) {
                     exit(json_encode(['Парк Краснодар', 'Олимпийский парк' , 'Красная поляна']));
 
                 } else {
