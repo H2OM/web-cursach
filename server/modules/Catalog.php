@@ -233,7 +233,6 @@
         }
 
         protected function getCities() {
-
             try {
 
                 $result = Db::getQuery("SELECT city FROM `catalog` GROUP BY city", 0, 0, 1);

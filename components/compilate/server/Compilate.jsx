@@ -5,18 +5,11 @@ import Uptitle from '@/lib/basecomponents/uptitle/uptitle';
 import Ratingbar from '@/lib/basecomponents/raitingbar/ratingbar';
 import Movement from '@/lib/basecomponents/movement/movement';
 import Addtofav from '@/lib/basecomponents/addtofav/addtofav';
+import GET_DATA from "@/lib/GETDATA/GET_DATA";
 
 export default async function Compilate () {
-    
-    const data = await fetch('http://127.0.0.1/api/catalog/main-compilate', {method: 'GET', cache: "no-cache"})
-    .then(data=>{
-        if(!data.ok) {
-            return false;
+    const data = await GET_DATA({controller: 'catalog', action: 'main-compilate'});
 
-        }
-        return data.json();
-    }).catch(()=>false);
-    
     if(!data || !Array.isArray(data)) {
         return;
     }
@@ -51,7 +44,6 @@ export default async function Compilate () {
             </div>
         )
     });
-
 
     return (
         <section className="Compilate">

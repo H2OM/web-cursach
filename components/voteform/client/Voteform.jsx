@@ -4,7 +4,6 @@ import '../voteform.scss';
 import ClientContext from "@/lib/context/ClientContext";
 import { useContext, useEffect, useState } from "react";
 
-
 export default function Voteform () {
     const {voteMenu, setVoteMenu, setNotification} = useContext(ClientContext);
     const [status, setStatus] = useState(false);
@@ -16,7 +15,7 @@ export default function Voteform () {
         if(status === true && !select) return;
         setStatus(true);
         const formData = new FormData(e.target);
-        fetch('http://localhost/api/vote/set-vote', {method: 'POST', body: formData, cache: "no-cache"})
+        fetch('/api/vote/set-vote', {method: 'POST', body: formData, cache: "no-cache"})
             .then(data=>{
                 if(!data.ok) {
                     throw new Error();

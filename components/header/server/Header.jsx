@@ -5,7 +5,6 @@ import Favmenu from '../client/Favmenuswitch';
 import Favmenuswitch from '../client/Favmenuswitch';
 import Searchbar from '../client/Searchbar';
 
-
 export default function Header () {
 
     return (

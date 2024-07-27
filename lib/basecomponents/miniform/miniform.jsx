@@ -22,7 +22,7 @@ export default function Miniform ({size}) {
         if(currentError) {return;}
         setSubmiting(true);
         const formData = new FormData(e.target);
-        fetch('http://localhost/api/form/mail-subscribe', {method: 'POST',  body: formData})
+        fetch('/api/form/mail-subscribe', {method: 'POST',  body: formData})
             .then((data)=>{
                 if(!data.ok) {
                     setNotification((current)=>({...current, status: false}));

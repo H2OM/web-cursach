@@ -4,7 +4,6 @@ import ClientContext from "@/lib/context/ClientContext";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 
-
 export default function Searchbar () {
     const { switchFavMenu, switchSearchMenu, setSearchMenuContent } = useContext(ClientContext);
     const [queue, setQueue] = useState(null);
@@ -18,7 +17,7 @@ export default function Searchbar () {
             setStatus(false);
             return;
         }
-        fetch('http://localhost/api/catalog/getby-search?content='+temp, {method: 'GET', cache: "no-cache"})
+        fetch('/api/catalog/getby-search?content='+temp, {method: 'GET', cache: "no-cache"})
         .then(data=>{
             if(!data.ok) {
                 throw new Error();

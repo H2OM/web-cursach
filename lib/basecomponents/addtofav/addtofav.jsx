@@ -10,7 +10,7 @@ export default function Addtofav ({id, title, article, image, mini = false, star
     const clickStarHandler = ()=>{
         if(!isLoad) {
             setLoad(true);
-            fetch('http://localhost/api/user/' +(favorites[id] ? "rem-fav" :"add-fav")+'?id='+id, {method: 'GET', cache: "no-cache"})
+            fetch('/api/user/' +(favorites[id] ? "rem-fav" :"add-fav")+'?id='+id, {method: 'GET', cache: "no-cache"})
             .then(data=>{
                 if(!data.ok) {
                     throw new Error();

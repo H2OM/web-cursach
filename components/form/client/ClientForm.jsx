@@ -43,7 +43,7 @@ export default function ClientForm () {
         if(error) {return;}
         setSubmiting(true);
         const formData = new FormData(e.target);
-        await fetch('http://localhost/api/form/form-callback', {method: 'POST',  body: formData})
+        await fetch('/api/form/form-callback', {method: 'POST',  body: formData})
             .then((data)=>{
                 if(!data.ok) {
                     setNotification((current)=>({...current, status: false}));

@@ -28,7 +28,7 @@ export const ClientProvider = ({children}) => {
         if(pages && !pages.includes(type)) {
             setPages(prev=>[...prev, type]);
 
-            fetch('http://localhost/api/metric/increase-'+type.replace("/", ""), {method: 'GET', cache: "no-cache"})
+            fetch('/api/metric/increase-'+type.replace("/", ""), {method: 'GET', cache: "no-cache"})
                 .then(data=>{
                     if(!data.ok) {
                         throw new Error();
@@ -41,7 +41,7 @@ export const ClientProvider = ({children}) => {
 
 
     useEffect(()=>{
-        fetch('http://localhost/api/vote/check-vote', {method: 'GET', cache: "no-cache"})
+        fetch('/api/vote/check-vote', {method: 'GET', cache: "no-cache"})
             .then(data=>{
                 if(!data.ok) {
                     throw new Error();
@@ -53,7 +53,7 @@ export const ClientProvider = ({children}) => {
             })
             .catch(()=>setVoteMenu(false));
 
-        fetch('http://localhost/api/user/get-fav', {method: 'GET', cache: "no-cache"})
+        fetch('/api/user/get-fav', {method: 'GET', cache: "no-cache"})
         .then(data=>{
             if(!data.ok) {
                 throw new Error();

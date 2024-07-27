@@ -4,18 +4,15 @@ import '../news.scss';
 import Uptitle from '@/lib/basecomponents/uptitle/uptitle';
 import NewsBlock from './NewsBlock';
 import LazyLoad from '../client/LazyLoad';
+import GET_DATA from "@/lib/GETDATA/GET_DATA";
 
 export default async function News ({full = false, searchParams = false}) {
     const count = (searchParams.count ?? 3);
-    const data = await fetch(`http://127.0.0.1/api/news/${full ? `get-news?count=${count}` : 'last-news'}`, {method: 'GET', cache: "no-cache"})
-    .then(data=>{
-        if(!data.ok) {
-            return false;
+    const data = await GET_DATA({
+        controller: 'news',
+        action: full ? `get-news?count=${count}` : 'last-news'
+    });
 
-        }
-        return data.json();
-    }).catch(()=>false);
-    
     return (
         <section className="News">
             <div className="container">

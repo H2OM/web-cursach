@@ -7,28 +7,17 @@ import Pagination from '../client/Pagination';
 import { notFound} from 'next/navigation';
 import Ratingbar from '@/lib/basecomponents/raitingbar/ratingbar';
 import Addtofav from '@/lib/basecomponents/addtofav/addtofav';
+import GET_DATA from "@/lib/GETDATA/GET_DATA";
 
 export default async function Catalog ({searchParams}) {
     const page = (searchParams.page ?? 1);
     const params = new URLSearchParams(searchParams);
     const getCities = async () => {
-        return await fetch('http://127.0.0.1/api/catalog/get-cities', {method: 'GET', cache: "no-cache"})
-        .then(data=>{
-            if(!data.ok) {
-                return false;
-            } 
-            return data.json();
-        }).catch(()=>false);
+        return GET_DATA({controller: 'catalog', action: 'get-cities'});
     }
     
     const getData = async () => {
-        return await fetch('http://127.0.0.1/api/catalog/get-catalog' + (params.size > 0 ? ("?"+params.toString()) : "") , {method: 'GET', cache: "no-cache"})
-        .then(data=>{
-            if(!data.ok) {
-                return false;
-            } 
-            return data.json();
-        }).catch(()=>false);
+        return GET_DATA({controller: 'catalog', action: 'get-catalog' + (params.size > 0 ? ("?"+params.toString()) : "")});
     }
     
     let [data, cities] = await Promise.all([getData(), getCities()]);
