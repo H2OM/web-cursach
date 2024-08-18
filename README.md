@@ -8,4 +8,4 @@
   > ### Тестирование: Jest + React Testing Library.
   > ### Бэк: PHP + Composer.
   > ### БД: MySQL.  
-  > ### Сервер: Node.js + Nginx в качестве прокси сервера и сервера.
+  > ### Сервер: Nginx + Node.js через прокси.
