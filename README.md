@@ -4,8 +4,8 @@
 - Университет кубГТУ. 
   
 ## Технологии проекта:
-  > ### Фронт: React + Next.js.
+  > ### Front-end: React + Next.js.
   > ### Тестирование: Jest + React Testing Library.
-  > ### Бэк: PHP + Composer.
+  > ### Back-end: PHP + Composer.
   > ### БД: MySQL.  
   > ### Сервер: Nginx + Node.js через прокси.
